@@ -139,7 +139,7 @@ function plus()
 	}
 	else
 	{
-		header("Location: /game/score_results.php");
+		header("Location: score_results.php");
 		exit;
 	}
 }
@@ -217,7 +217,7 @@ function minus()
 	}
 	else
 	{
-		header("Location: /game/score_results.php");
+		header("Location: score_results.php");
 		exit;
 	}
 }
@@ -288,7 +288,7 @@ function multiplication()
 	}
 	else
 	{
-		header("Location: /game/score_results.php");
+		header("Location: score_results.php");
 		exit;
 	}
 }
@@ -372,7 +372,7 @@ function division()
 	}
 	else
 	{
-		header("Location: /game/score_results.php");
+		header("Location: score_results.php");
 		exit;
 	}
 }
