@@ -73,7 +73,10 @@
 			die("Connection failed: " . $conn->connect_error);
 		} 
 		
-		$sql = "SELECT * FROM Score ORDER BY points DESC limit 10";
+		$sql = "SELECT * 
+				FROM Score 
+				GROUP BY userid 
+				ORDER BY points DESC limit 10";
 				
 		$result = mysqli_query($conn, $sql);
 			if (!$result) {
