@@ -30,7 +30,7 @@ class User {
         $this->email =  $par ;
     }
     function getUserid(){
-        $this->userId;
+        return $this->userId;
     }
     function getfirstname(){
         return $this->firstname ;
@@ -40,7 +40,7 @@ class User {
      }
      
     function getemail(){
-        $this->email ;
+        return $this->email ;
     }
  }
 ?>

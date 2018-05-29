@@ -1,3 +1,32 @@
+<?php 
+	
+	session_start();
+	
+	require_once('classes/User.php');
+	require_once('classes/Game.php');
+	
+	$_SESSION['User'] = '';
+	
+	if(!empty($_GET['firstname']) && !empty($_GET['lastname']) && !empty($_GET['email']))
+	{
+		$user = new User(0, $_GET['firstname'], $_GET['lastname'], $_GET['email']);
+		$_SESSION['User'] = serialize($user);
+	}
+	
+	$_SESSION['Game'] = '';
+	
+	/*if(isset($_GET['gameid']) && isset($_GET['gametype'])
+	{*/
+		$game = new Game(1, "math");
+		$_SESSION['Game'] = serialize($game);
+	//}
+	
+	var_dump($_SESSION['User']);
+	var_dump($_SESSION['Game']);
+	
+	
+?>
+
 <html>
 
 	<head>

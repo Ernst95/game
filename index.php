@@ -25,18 +25,18 @@
 			<div class="col-sm-4">
 			</div>
 			<div class="col-sm-4">
-				<form action="game_page.php">
+				<form action="game_page.php" method="GET">
 					<div class="form-group">
 						<label>First Name:</label>
-						<input type="text" class="form-control" id="firstname" required>
+						<input type="text" class="form-control" name="firstname" required>
 					</div>
 					<div class="form-group">
 						<label>Last Name:</label>
-						<input type="text" class="form-control" id="lastname" required>
+						<input type="text" class="form-control" name="lastname" required>
 					</div>
 					<div class="form-group">	
 						<label for="email">Email:</label>
-						<input type="email" class="form-control" id="email" required>
+						<input type="email" class="form-control" name="email" required>
 					</div>
 						<button type="submit" class="btn btn-default">Submit</button>
 				</form>

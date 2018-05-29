@@ -3,13 +3,13 @@ class Score{
 /* Member variables */
 var $scoreId;
 var $points;
-//var $gameId;
-//var $userId;
-function __construct($scoreId,$points/*,$gameId,$userId*/) {
+var $gameId;
+var $userId;
+function __construct($scoreId,$points,$gameId,$userId) {
     $this->scoreId = $scoreId;
     $this->points = $points;
-  //  $this->gameId = $gameId;
-   // $this->userId = $userId;
+	$this->gameId = $gameId;
+	$this->userId = $userId;
  }
  function setScoreId($par){
     $this->scoreId =$par ;

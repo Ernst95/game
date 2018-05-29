@@ -1,3 +1,10 @@
+<?php
+	session_start();
+
+	require_once('classes/Game.php');
+		
+?>
+
 <html>
 
 	<head>
@@ -26,11 +33,19 @@
 		
 <?php
 
-session_start();
-
 if(!isset($_SESSION['operator']))
 {
 	$_SESSION['operator'] = $_GET['operator'];
+}
+
+if(!isset($_SESSION['end']))
+{
+	$_SESSION['end'] = '';
+}
+
+if(!isset($_SESSION['correct']))
+{
+	$_SESSION['correct'] = '';
 }
 
 if($_SESSION['operator'])
