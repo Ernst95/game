@@ -23,5 +23,11 @@ function getScoreId(){
  function getpoints(){
     return $this->points;
  }
+ function getgameId(){
+    return $this->gameId;
+ }
+ function getuserId(){
+    return $this->userId;
+ }
 }
 ?>

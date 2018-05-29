@@ -41,7 +41,18 @@
 						<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 			</div>
-				<div class="col-sm-4">
+			<div class="col-sm-4">
+			</div>
+		</div>
+		<div class="row top-buffer">
+			<div class="col-sm-4">
+			</div>
+			<div class="col-sm-4">
+			</div>
+			<div class="col-sm-4">
+				<form action="score_board.php" method="GET">
+					<button type="submit" class="btn btn-default">View Score Board</button>
+				</form>
 			</div>
 		</div>
 		</div>

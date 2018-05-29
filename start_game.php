@@ -18,12 +18,17 @@
 			
 			.top-buffer { 
 				margin-top:20px; 
+				text-align: center;
 			}
 			
 			input, button {
 				width: 50%;
 				height: 10%;
 			}
+			h1 {
+				text-align: center;
+			}
+			
 
 		</style>
 	</head>
@@ -45,7 +50,7 @@ if(!isset($_SESSION['end']))
 
 if(!isset($_SESSION['correct']))
 {
-	$_SESSION['correct'] = '';
+	$_SESSION['correct'] = 0;
 }
 
 if($_SESSION['operator'])
@@ -73,12 +78,10 @@ function plus()
 	
 		if(isset($_GET['answer']))
 		{
-			echo "<br>" . $_SESSION['answer2'] . "<br>";
 			
 			if((int)$_GET['answer'] == (int)$_SESSION['answer2'])
 			{
 				$_SESSION['correct'] += 1;
-				echo $_SESSION['correct'];
 			}
 			
 			$_SESSION['end'] += 1;
@@ -113,7 +116,7 @@ function plus()
 				<img src="images/numbers/<?php echo $number2; ?>.png"></img>
 			</div>
 		</div>
-		<div class="row top-buffer">
+		<div class="row top-buffer align">
 			<div class="col-sm-3">
 			</div>
 			<div class="col-sm-6">
@@ -122,7 +125,7 @@ function plus()
 			<div class="col-sm-3">
 			</div>
 		</div>
-		<div class="row top-buffer">
+		<div class="row top-buffer align">
 			<div class="col-sm-3">
 			</div>
 			<div class="col-sm-6">
@@ -146,12 +149,10 @@ function minus()
 	
 		if(isset($_GET['answer']))
 		{
-			echo "<br>" . $_SESSION['answer2'] . "<br>";
 			
 			if((int)$_GET['answer'] == (int)$_SESSION['answer2'])
 			{
 				$_SESSION['correct'] += 1;
-				echo $_SESSION['correct'];
 			}
 			
 			$_SESSION['end'] += 1;
@@ -226,12 +227,10 @@ function multiplication()
 	
 		if(isset($_GET['answer']))
 		{
-			echo "<br>" . $_SESSION['answer2'] . "<br>";
 			
 			if((int)$_GET['answer'] == (int)$_SESSION['answer2'])
 			{
 				$_SESSION['correct'] += 1;
-				echo $_SESSION['correct'];
 			}
 			
 			$_SESSION['end'] += 1;
@@ -299,12 +298,10 @@ function division()
 	
 		if(isset($_GET['answer']))
 		{
-			echo "<br>" . $_SESSION['answer2'] . "<br>";
 			
 			if((int)$_GET['answer'] == (int)$_SESSION['answer2'])
 			{
 				$_SESSION['correct'] += 1;
-				echo $_SESSION['correct'];
 			}
 			
 			$_SESSION['end'] += 1;
