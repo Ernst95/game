@@ -73,9 +73,10 @@
 			die("Connection failed: " . $conn->connect_error);
 		} 
 		
-		$sql = "SELECT s.points, s.gameid, s.userid, u.firstname
+		$sql = "SELECT s.points, u.firstname, g.type
 				FROM Score s
 				LEFT JOIN User u ON u.userid = s.userid 
+				LEFT JOIN Game g ON g.gameid = s.gameid
 				GROUP BY s.userid 
 				ORDER BY s.points DESC limit 10";
 				
@@ -88,18 +89,16 @@
 		echo "
 		<tr>
 		<th>Points</th>
-		<th>Game ID</th>
+		<th>Game</th>
 		<th>Name</th>
-		<th>User ID</th>
 		</tr>";
 
 		while($row = mysqli_fetch_array($result))
 		{
 			echo "<tr>";
 			echo "<td>" . $row['points'] . "</td>";
-			echo "<td>" . $row['gameid'] . "</td>";
+			echo "<td>" . $row['type'] . "</td>";
 			echo "<td>" . $row['firstname'] . "</td>";
-			echo "<td>" . $row['userid'] . "</td>";
 			echo "</tr>";
 		}
 
